@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar.jsx"
 
 function App() {
   return (
-    <div className="h-screen bg-gradient-to-b from-blue-500 to-purple-600">
+    <div className="min-h-screen bg-gradient-to-b from-blue-500 to-purple-600">
       <Navbar />
       <Routes>
 	<Route path="/" element={<Home/>}/>
