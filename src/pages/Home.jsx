@@ -59,7 +59,7 @@ const Home = () => {
 	      </div>
 	      <p className="text-gray-300 text-sm">{note.createdAt}</p>
 	    </div>
-	    <p className="text-white line-clamp-5">{note.context}</p>
+	    <p className="text-white line-clamp-5 tracking-wider">{note.context}</p>
 	  </div>
 	))}
       </div>
