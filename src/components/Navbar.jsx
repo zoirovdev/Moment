@@ -4,18 +4,19 @@ import { Plus, Search } from "lucide-react"
 const Navbar = () => {
   return (
     <div className="flex justify-center">
-      <div className="w-[700px] h-[45px] bg-[#000000] mt-[10px] rounded-[80px]
-	flex flex-row justify-between items-center px-2 gap-2">
+      <div className="w-[700px] h-[40px] mt-[10px] flex flex-row justify-between items-center px-2 gap-2">
 	<div className="flex flex-row justify-between items-center gap-1 w-[600px]
-	  border border-[#393E46] hover:border-purple-500 rounded-[50px] px-2 py-1">
+	  rounded-[50px] px-4 py-1 bg-[#000000] h-full focus-within:bg-gradient-to-r 
+	  focus-within:from-[#090040] focus-within:to-[#9B177E]">
 	  <input type="text" placeholder="Search" 
 	    className="text-[#FFFFF0] outline-none w-[95%] pl-2 pr-1"/>
 	  <Search className="text-[#FFFFF0]"/>
 	</div>
-	<div className="flex flex-row justify-center items-center gap-1 
-	  border border-[#393E46] hover:border-purple-500 rounded-[50px] px-2 py-1">
-	  <p className="text-[#FFFFF0]">Create</p>
-          <Plus className="text-[#FFFFF0]"/>
+	<div className="flex flex-row justify-center items-center gap-1 bg-[#000000]
+	  rounded-[50px] px-4 py-1 h-full cursor-pointer hover:shadow-xl text-[#FFFFF0]
+	  hover:bg-gradient-to-r hover:from-[#090040] hover:to-[#9B177E]">
+	  <p className="">Create</p>
+          <Plus className=""/>
 	</div>
       </div>
     </div>
