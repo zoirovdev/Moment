@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router"
 import Home from "./pages/Home.jsx"
+import View from "./pages/View.jsx"
 import Navbar from "./components/Navbar.jsx"
 
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Routes>
 	<Route path="/" element={<Home/>}/>
+	<Route path="/view" element={<View/>}/>
       </Routes>
     </div>
   )

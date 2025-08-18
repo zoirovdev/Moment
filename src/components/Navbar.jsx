@@ -15,7 +15,7 @@ const Navbar = () => {
 	<div className="flex flex-row justify-center items-center gap-1 bg-[#000000]
 	  rounded-[50px] px-4 py-1 h-full cursor-pointer hover:shadow-xl text-[#FFFFF0]
 	  hover:bg-gradient-to-r hover:from-[#090040] hover:to-[#9B177E]">
-	  <p className="">Create</p>
+	  <p className="font-medium tracking-wider">Create</p>
           <Plus className=""/>
 	</div>
       </div>
