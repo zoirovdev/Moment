@@ -15,7 +15,7 @@ const View = () => {
 	    <p className="mr-2 font-medium tracking-wider">Back</p>
 	  </Link>
 	  <div className="flex flex-row gap-1">
-	    <Link to="/" className="flex flex-row justify-center items-center 
+	    <Link to="/edit" className="flex flex-row justify-center items-center 
 	      bg-[#000000] px-4 py-1 gap-2 rounded-[20px]">
               <SquarePen className="w-[20px] h-[20px]"/>
 	      <p className="font-medium tracking-wider">Edit</p>

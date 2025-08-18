@@ -55,8 +55,12 @@ const Home = () => {
           <Link to={`/view`} key={note.id} className="bg-[#000000] rounded-[20px] p-[20px] space-y-[10px]">
 	    <div className="flex flex-row justify-between items-center">
 	      <div className="flex flex-row">
-                <Pencil className="text-blue-700 w-[25px] h-[25px] p-1 hover:bg-gray-900 rounded-[5px]"/>
-	        <Trash className="text-purple-700 w-[25px] h-[25px] p-1 hover:bg-gray-900 rounded-[5px]"/>
+		<Link to={"/edit"}>
+                  <Pencil className="text-blue-700 w-[25px] h-[25px] p-1 hover:bg-gray-900 rounded-[5px]"/>
+		</Link>
+		<Link to={"/"}>
+	          <Trash className="text-purple-700 w-[25px] h-[25px] p-1 hover:bg-gray-900 rounded-[5px]"/>
+	        </Link>
 	      </div>
 	      <p className="text-gray-300 text-sm">{note.createdAt}</p>
 	    </div>
