@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router"
 import Home from "./pages/Home.jsx"
 import View from "./pages/View.jsx"
 import Edit from "./pages/Edit.jsx"
+import Create from "./pages/Create.jsx"
 
 // components
 import Navbar from "./components/Navbar.jsx"
@@ -20,6 +21,7 @@ function App() {
 	<Route path="/" element={<Home/>}/>
 	<Route path="/view" element={<View/>}/>
 	<Route path="/edit" element={<Edit/>}/>
+	<Route path="/create" element={<Create/>}/>
       </Routes>
     </div>
   )

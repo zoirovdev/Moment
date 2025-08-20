@@ -1,4 +1,5 @@
 import { Plus, Search } from "lucide-react"
+import { Link } from "react-router"
 
 
 const Navbar = () => {
@@ -12,12 +13,12 @@ const Navbar = () => {
 	    className="text-[#FFFFF0] outline-none w-[95%] pl-2 pr-1"/>
 	  <Search className="text-[#FFFFF0]"/>
 	</div>
-	<div className="flex flex-row justify-center items-center gap-1 bg-[#000000]
+	<Link to={"/create"} className="flex flex-row justify-center items-center gap-1 bg-[#000000]
 	  rounded-[50px] px-4 py-1 h-full cursor-pointer hover:shadow-xl text-[#FFFFF0]
 	  hover:bg-gradient-to-r hover:from-[#090040] hover:to-[#9B177E]">
 	  <p className="font-medium tracking-wider">Create</p>
           <Plus className=""/>
-	</div>
+	</Link>
       </div>
     </div>
   )
