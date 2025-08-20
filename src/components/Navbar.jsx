@@ -1,8 +1,20 @@
 import { Plus, Search } from "lucide-react"
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
+import { useState } from "react"
 
 
 const Navbar = () => {
+  const [searchVal, setSearchVal] = useState("")
+  const navigate = useNavigate()
+
+
+  const handleSearch = (e) => {
+    if(e.key === "Enter"){
+      const params = encodeURIComponent(searchVal.trim())
+      navigate(`/search?query=${params}`)
+    }
+  }
+
   return (
     <div className="flex justify-center">
       <div className="w-[700px] h-[40px] mt-[10px] flex flex-row justify-between items-center px-2 gap-2">
@@ -10,7 +22,9 @@ const Navbar = () => {
 	  rounded-[50px] px-4 py-1 bg-[#000000] h-full focus-within:bg-gradient-to-r 
 	  focus-within:from-[#090040] focus-within:to-[#9B177E]">
 	  <input type="text" placeholder="Search" 
-	    className="text-[#FFFFF0] outline-none w-[95%] pl-2 pr-1"/>
+	    className="text-[#FFFFF0] outline-none w-[95%] pl-2 pr-1"
+	    onChange={(e) => setSearchVal(e.target.value)}
+	    onKeyDown={(e) => handleSearch(e)}/>
 	  <Search className="text-[#FFFFF0]"/>
 	</div>
 	<Link to={"/create"} className="flex flex-row justify-center items-center gap-1 bg-[#000000]
