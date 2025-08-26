@@ -18,17 +18,18 @@ const Edit = () => {
   return (
     <div className="flex justify-center">
       <div className="w-[700px] mt-[40px] space-y-[10px]">
-	<p className="text-2xl font-medium mb-[20px] italic">Editing a note</p>
+	<p className="text-2xl font-medium mb-[20px]">Editing a note</p>
 	<div>
 	  <textarea value={phtext} onChange={(e) => setPhtext(e.target.value)}
-	    className="bg-[#000000] text-[#FFFFF0] w-[100%] h-[400px] outline-none
+	    className="border border-[#ced4da] focus-within:border-[#08CB00] 
+	      text-[#000000] w-[100%] h-[400px] outline-none
 	      py-6 px-8 rounded-[20px] tracking-widest text-medium leading-7"
 	  ></textarea>
 	</div>
 	<div className="flex flex-row w-[100%] text-[#FFFFF0] gap-1">
-          <button className="w-[50%] bg-[#000000] p-1 rounded-[20px]"
+          <button className="w-[50%] bg-[#6c757d] p-2 rounded-[20px] cursor-pointer"
 	    onClick={(e) => navigate(-1)}>Cancel</button>
-          <button className="w-[50%] bg-[#000000] p-1 rounded-[20px]" 
+          <button className="w-[50%] bg-[#08CB00] p-2 rounded-[20px] cursor-pointer" 
 	    onClick={(e) => update()}>Update</button>
 	</div>
       </div>
