@@ -23,7 +23,7 @@ const Edit = () => {
 	  <textarea value={phtext} onChange={(e) => setPhtext(e.target.value)}
 	    className="border border-[#ced4da] focus-within:border-[#08CB00] 
 	      text-[#000000] w-[100%] h-[400px] outline-none
-	      py-6 px-8 rounded-[20px] tracking-widest text-medium leading-7"
+	      py-6 px-8 rounded-[20px] tracking-wider text-medium leading-7"
 	  ></textarea>
 	</div>
 	<div className="flex flex-row w-[100%] text-[#FFFFF0] gap-1">

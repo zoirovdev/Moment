@@ -1,11 +1,13 @@
 import { Plus, Search, User } from "lucide-react"
-import { Link, useNavigate } from "react-router"
+import { Link, useNavigate, useLocation } from "react-router"
 import { useState } from "react"
 
 
 const Navbar = () => {
   const [searchVal, setSearchVal] = useState("")
   const navigate = useNavigate()
+  const location = useLocation()
+  const page = location.pathname === '/sign-up' || location.pathname === '/sign-in'
 
 
   const handleSearch = (e) => {
@@ -16,11 +18,12 @@ const Navbar = () => {
   }
 
   return (
-    <div className="inline-flex space-x-[180px]">
-      <Link to="/" className="flex justify-center items-center mt-[10px] ml-[70px]">
+    <div className="inline-flex space-x-[171px]">
+      <Link to="/" className={`${page ? "hidden" : "" } flex justify-center items-center mt-[10px] ml-[70px]`}>
         <p className="font-bold tracking-widest text-2xl ">Nota</p>
       </Link>
-      <div className="w-[700px] h-[40px] mt-[10px] flex flex-row justify-center items-center px-2 gap-2">
+      <div className={`${page ? "hidden" : ""} w-[700px] h-[40px] mt-[10px] 
+        flex flex-row justify-center items-center px-2 gap-2`}>
 	<div className="flex flex-row justify-between items-center gap-1 w-[600px] 
 	  rounded-[50px] px-4 py-1 h-full border border-[#ced4da] 
 	  hover:text-[#ffffff] focus-within:border-[#08CB00]">

@@ -36,7 +36,7 @@ const View = () => {
 	  </div>
 	</div>
 	<div className="border border-[#ced4da] text-[#000000] p-8 rounded-[10px]">
-	  <p className="tracking-widest font-medium text-md leading-7">The morning sun cast long shadows across the empty park as Maya jogged along the winding path. She paused at the old oak tree where she and her grandmother used to sit and feed the squirrels every Sunday. The memories flooded back - warm laughter, shared stories, and the gentle wisdom her grandmother always offered. Now, years later, Maya found herself returning to this same spot whenever she needed guidance or comfort. She smiled softly, feeling her grandmother's presence in the rustling leaves above, and continued on her run with renewed purpose.</p>
+	  <p className="tracking-wider text-md leading-7">The morning sun cast long shadows across the empty park as Maya jogged along the winding path. She paused at the old oak tree where she and her grandmother used to sit and feed the squirrels every Sunday. The memories flooded back - warm laughter, shared stories, and the gentle wisdom her grandmother always offered. Now, years later, Maya found herself returning to this same spot whenever she needed guidance or comfort. She smiled softly, feeling her grandmother's presence in the rustling leaves above, and continued on her run with renewed purpose.</p>
 	</div>
       </div>
 
