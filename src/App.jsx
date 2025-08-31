@@ -15,25 +15,53 @@ import SignIn from "./pages/SignIn.jsx"
 
 // components
 import Navbar from "./components/Navbar.jsx"
+import { AuthProvider } from "./AuthContext.jsx"
+import ProtectedRoute from "./ProtectedRoute.jsx"
 
 
 
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#ffffff]">
-      <Navbar />
-      <Routes>
-	<Route path="/" element={<Home/>}/>
-	<Route path="/view" element={<View/>}/>
-	<Route path="/edit" element={<Edit/>}/>
-	<Route path="/create" element={<Create/>}/>
-	<Route path="/search" element={<Search/>}/>
-	<Route path="/account" element={<Account/>}/>
-	<Route path="/sign-up" element={<SignUp/>}/>
-	<Route path="/sign-in" element={<SignIn/>}/>
-      </Routes>
-    </div>
+    <AuthProvider>
+      <div className="min-h-screen bg-[#ffffff]">
+        <Navbar />
+        <Routes>
+	  <Route path="/" element={
+	    <ProtectedRoute>
+	      <Home/>
+	    </ProtectedRoute>
+	  }/>
+	  <Route path="/view" element={
+	    <ProtectedRoute>
+	      <View/>
+	    </ProtectedRoute>
+	  }/>
+	  <Route path="/edit" element={
+	    <ProtectedRoute>
+	      <Edit/>
+	    </ProtectedRoute>
+	  }/>
+	  <Route path="/create" element={
+	    <ProtectedRoute>
+	      <Create/>
+	    </ProtectedRoute>
+	  }/>
+	  <Route path="/search" element={
+            <ProtectedRoute>
+	      <Search/>
+            </ProtectedRoute>
+	  }/>
+	  <Route path="/account" element={
+            <ProtectedRoute>
+	      <Account/>
+            </ProtectedRoute>
+	  }/>
+	  <Route path="/sign-up" element={<SignUp/>}/>
+	  <Route path="/sign-in" element={<SignIn/>}/>
+        </Routes>
+      </div>
+    </AuthProvider>
   )
 }
 
