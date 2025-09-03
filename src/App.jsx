@@ -32,12 +32,12 @@ function App() {
 	      <Home/>
 	    </ProtectedRoute>
 	  }/>
-	  <Route path="/view" element={
+	  <Route path="/view/:id" element={
 	    <ProtectedRoute>
 	      <View/>
 	    </ProtectedRoute>
 	  }/>
-	  <Route path="/edit" element={
+	  <Route path="/edit/:id" element={
 	    <ProtectedRoute>
 	      <Edit/>
 	    </ProtectedRoute>

@@ -29,6 +29,7 @@ const noteService = {
   },
   createNote: async (noteData) => {
     try {
+      console.log(noteData)
       const response = await api.post('/notes', noteData, {
         headers: {
           Authorization: `Bearer ${token}`

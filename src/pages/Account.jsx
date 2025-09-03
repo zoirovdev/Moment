@@ -39,7 +39,7 @@ const Account = () => {
     getCurrentUsr();
   }, [])
 
-  console.log(user.data)
+  
   return (
     <div className="flex justify-center mt-[30px]">
       {user?.data ? <div className="w-[680px] h-[300px] border rounded-[20px] border-[#ced4da]

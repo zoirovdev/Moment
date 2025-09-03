@@ -1,26 +1,47 @@
 import { ArrowLeft } from "lucide-react"
-import { useState } from "react"
-import { useNavigate } from "react-router"
-
+import { useState, useEffect } from "react"
+import { useNavigate, useParams } from "react-router"
+import noteService from "../services/noteService.js"
 
 
 
 const Edit = () => {
-  const [phtext, setPhtext] = useState("The ancient art of origami transforms a simple piece of paper into intricate sculptures through precise folds and creases. Originating in Japan during the 6th century, this practice was initially reserved for ceremonial purposes and the wealthy elite. Modern origami has evolved far beyond traditional cranes and flowers, with artists creating complex mathematical models and even functional objects like boxes and lampshades. The therapeutic benefits of paper folding have made it popular in schools, hospitals, and meditation centers worldwide. Scientists have even applied origami principles to design everything from space telescopes that unfold in orbit to medical devices that can be folded for insertion and then expand inside the body.")
+  const [note, setNote] = useState({})
   
+  const { id } = useParams()
 
   const navigate = useNavigate()
 
-  const update = () => {
-    navigate(-1)
+  const update = async () => {
+    try {
+      const data = await noteService.updateNoteById(note, note._id)
+      setNote(data.data)
+      navigate(-1)
+    } catch (error) {
+      console.log(error)
+    }
   }
+
+  const getNote = async () => {
+    try {
+      const data = await noteService.getNoteById(id)
+      setNote(data.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    getNote()
+  }, [])
+
 
   return (
     <div className="flex justify-center">
       <div className="w-[700px] mt-[40px] space-y-[10px]">
 	<p className="text-2xl font-medium mb-[20px]">Editing a note</p>
-	<div>
-	  <textarea value={phtext} onChange={(e) => setPhtext(e.target.value)}
+	<div key={note._id}>
+	  <textarea value={note.content} onChange={(e) => setNote({...note, content: e.target.value})}
 	    className="border border-[#ced4da] focus-within:border-[#08CB00] 
 	      text-[#000000] w-[100%] h-[400px] outline-none
 	      py-6 px-8 rounded-[20px] tracking-wider text-medium leading-7"

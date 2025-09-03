@@ -8,15 +8,21 @@ import { useState } from "react"
 
 const Create = () => {
   const navigate = useNavigate()
-  const [note, setNote] = useState({});
+  const [note, setNote] = useState({
+    content: "",
+    user: {}
+  });
+  
 
 
+  
   const create = async () => {
     try {
       const userId = localStorage.getItem('userId');
       const user = await userService.getUserById(userId);
-      setNote({ ...note, user: user });
-      const data = await noteService.createNote(note);
+      const updatedNote = { ...note, user: user.data }
+
+      const data = await noteService.createNote(updatedNote);
       setNote(data);
       navigate('/');
     } catch (error) {
@@ -29,7 +35,7 @@ const Create = () => {
     await create();
   }
 
-  console.log(note)
+  
   return (
     <div className="flex justify-center">
       <div className="w-[700px] mt-[40px] space-y-2">
