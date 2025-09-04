@@ -46,10 +46,10 @@ const Create = () => {
 	  value={note.content}
 	  onChange={(e) => { setNote({ ...note, content: e.target.value }) }}></textarea>
 	<div className="w-full flex flex-row gap-2">
-          <button className="w-[50%] bg-[#ced4da] text-[#000000] py-2 
+          <button className="w-[50%] bg-[#7A7D7D] text-[#000000] py-2 hover:bg-[#9B9FB5]
 	    rounded-[20px] font-medium tracking-wider cursor-pointer"
 	    onClick={() => navigate(-1)}>Cancel</button>
-	  <button className="w-[50%] bg-[#08CB00] text-[#FFFFF0] py-2 
+	  <button className="w-[50%] bg-[#08CB00] text-[#FFFFF0] py-2 hover:bg-[#20BF55]
 	    rounded-[20px] font-medium tracking-wider cursor-pointer"
 	    onClick={() => handleCreate()}>Add</button>
 	</div>

@@ -1,4 +1,4 @@
-import { Plus, Search, User } from "lucide-react"
+import { Plus, Search, User, SunMedium } from "lucide-react"
 import { Link, useNavigate, useLocation } from "react-router"
 import { useState } from "react"
 
@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleSearch = (e) => {
     if(e.key === "Enter"){
       const params = encodeURIComponent(searchVal.trim())
-      navigate(`/search?query=${params}`)
+      navigate(`/search?q=${params}`)
     }
   }
 
@@ -44,6 +44,10 @@ const Navbar = () => {
 	  border-[#ced4da] hover:border-[#08CB00] text-[#212529] hover:text-[#ffffff] hover:bg-[#08CB00] ">
 	  <User />
 	</Link>
+	<button className="border border-[#ced4da] rounded-[50%] px-2 py-1 h-full cursor-pointer 
+	  hover:shadow-xl hover:border-[#08CB00] hover:bg-[#08CB00]">
+	  <SunMedium className="text-[#212529] hover:text-[#ffffff]" />
+	</button>
       </div>
     </div>
   )

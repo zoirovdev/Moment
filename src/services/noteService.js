@@ -63,6 +63,18 @@ const noteService = {
     } catch (error) {
       throw error;
     }
+  },
+  searchNotes: async (query) => {
+    try {
+      const response = await api.get(`/notes/search?q=${query}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+	}
+      });
+      return response.data
+    } catch (error) {
+      throw error;
+    }
   }
 }
 
