@@ -17,14 +17,15 @@ import SignIn from "./pages/SignIn.jsx"
 import Navbar from "./components/Navbar.jsx"
 import { AuthProvider } from "./AuthContext.jsx"
 import ProtectedRoute from "./ProtectedRoute.jsx"
-
+import { ThemeProvider } from './ThemeContext.jsx';
 
 
 
 function App() {
   return (
+    <ThemeProvider>
     <AuthProvider>
-      <div className="min-h-screen bg-[#ffffff]">
+      <div className="min-h-screen bg-[#ffffff] dark:bg-[#343a40]">
         <Navbar />
         <Routes>
 	  <Route path="/" element={
@@ -62,6 +63,7 @@ function App() {
         </Routes>
       </div>
     </AuthProvider>
+    </ThemeProvider>
   )
 }
 

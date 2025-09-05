@@ -39,15 +39,15 @@ const Edit = () => {
   return (
     <div className="flex justify-center">
       <div className="w-[700px] mt-[40px] space-y-[10px]">
-	<p className="text-2xl font-medium mb-[20px]">Editing a note</p>
+	<p className="text-2xl font-medium mb-[20px] dark:text-[#ffffff]">Editing a note</p>
 	<div key={note._id}>
 	  <textarea value={note.content} onChange={(e) => setNote({...note, content: e.target.value})}
-	    className="border border-[#ced4da] focus-within:border-[#08CB00] 
-	      text-[#000000] w-[100%] h-[400px] outline-none
+	    className="border border-[#ced4da] dark:border-[#212529] focus-within:border-[#08CB00] 
+	      text-[#000000] dark:text-[#ffffff] w-[100%] h-[400px] outline-none
 	      py-6 px-8 rounded-[20px] tracking-wider text-medium leading-7"
 	  ></textarea>
 	</div>
-	<div className="flex flex-row w-[100%] text-[#FFFFF0] gap-1">
+	<div className="flex flex-row w-[100%] text-[#FFFFF0] dark:text-[#000000] gap-1">
           <button className="w-[50%] bg-[#6c757d] p-2 rounded-[20px] cursor-pointer"
 	    onClick={(e) => navigate(-1)}>Cancel</button>
           <button className="w-[50%] bg-[#08CB00] p-2 rounded-[20px] cursor-pointer" 

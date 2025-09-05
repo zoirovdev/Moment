@@ -18,7 +18,8 @@ const Delete = ({setDeleteModal, id}) => {
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50">
-          <div className="bg-white p-6 space-y-6 rounded-lg shadow-xl text-black">
+          <div className="bg-white dark:bg-[#403d39] p-6 space-y-6 rounded-lg shadow-xl 
+	    text-black dark:text-[#ffffff]">
             <p className="mb-4">Are you sure you want to delete this note?</p>
             <div className="flex gap-1">
               <button onClick={() => setDeleteModal(false)}
@@ -26,7 +27,8 @@ const Delete = ({setDeleteModal, id}) => {
                 Cancel
               </button>
               <button onClick={() => { deleteNote(); }}
-                className="px-4 py-1 w-[50%] bg-red-500 text-white rounded-[20px] hover:bg-red-600 cursor-pointer">
+                className="px-4 py-1 w-[50%] bg-red-500 text-white dark:text-[#000000] 
+		  rounded-[20px] hover:bg-red-600 cursor-pointer">
                 Delete
               </button>
             </div>
