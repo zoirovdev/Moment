@@ -22,6 +22,7 @@ const authService = {
       const { token, user } = response.data;
       localStorage.setItem('token', token);
       localStorage.setItem('userId', user._id);
+      console.log(response.data)
       return response.data;
     } catch (error) {
       throw error;
