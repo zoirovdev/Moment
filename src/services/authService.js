@@ -17,6 +17,7 @@ const authService = {
   },
   signUp: async (userData) => {
     try {
+      console.log('It is here')
       const response = await api.post('/auth/sign-up', userData);
       const { token, user } = response.data;
       localStorage.setItem('token', token);
