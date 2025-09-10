@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className={`${page ? "hidden" : ""} w-[700px] h-[40px] mt-[10px] 
         flex flex-row justify-center items-center px-2 gap-2`}>
 	<div className="flex flex-row justify-between items-center gap-1 w-[600px] 
-	  rounded-[50px] px-4 py-1 h-full border border-[#ced4da] dark:border-[#212529] 
+	  rounded-[50px] px-4 py-1 h-full border border-[#ced4da] dark:border-[#515052] 
 	  focus-within:border-[#08CB00]">
 	  <input type="text" placeholder="Search" 
 	    className="text-black dark:text-[#ffffff] outline-none w-[95%] pl-2 pr-1"
@@ -38,24 +38,25 @@ const Navbar = () => {
 	</div>
 	<Link to={"/create"} className="flex flex-row justify-center items-center gap-1
 	  rounded-[50px] px-4 py-1 h-full cursor-pointer hover:shadow-xl border 
-	  border-[#ced4da] dark:border-[#212529] hover:border-[#08CB00] text-[#212529] dark:text-[#ffffff]
+	  border-[#ced4da] dark:border-[#515052] hover:border-[#08CB00] text-[#212529] dark:text-[#ffffff]
 	  hover:text-[#ffffff] dark:hover:text-[#000000] hover:bg-[#08CB00] ">
 	  <p className="font-medium tracking-wider">Create</p>
           <Plus className=""/>
 	</Link>
 	<Link to={"/account"} className="flex flex-row justify-center items-center gap-1
 	  rounded-[50%] px-2 py-1 h-full cursor-pointer hover:shadow-xl border 
-	  border-[#ced4da] dark:border-[#212529] hover:border-[#08CB00] text-[#212529] dark:text-[#ffffff] 
+	  border-[#ced4da] dark:border-[#515052] hover:border-[#08CB00] text-[#212529] dark:text-[#ffffff] 
 	  hover:text-[#ffffff] dark:hover:text-[#000000] hover:bg-[#08CB00] ">
 	  <User />
 	</Link>
-	<button className="border border-[#ced4da] dark:border-[#212529] 
+	<button className="border border-[#ced4da] dark:border-[#515052] 
 	  rounded-[50%] px-2 py-1 h-full cursor-pointer 
 	  hover:shadow-xl hover:border-[#08CB00] hover:bg-[#08CB00] 
-	  text-[#212529] dark:text-[#ffffff] hover:text-[#ffffff] dark:hover:text-[#000000]">
+	  text-[#212529] dark:text-[#ffffff] hover:text-[#ffffff] dark:hover:text-[#000000]"
+	  onClick={toggleTheme}>
 	  {isDark 
-	    ? <Moon onClick={toggleTheme}/>
-	    : <SunMedium className="" onClick={toggleTheme}/>
+	    ? <Moon/>
+	    : <SunMedium />
 	  }
 	</button>
       </div>

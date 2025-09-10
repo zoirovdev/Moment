@@ -37,13 +37,13 @@ const View = () => {
 	  </Link>
 	  <div className="flex flex-row gap-1">
 	    <Link to={`/edit/${note._id}`} className="flex flex-row justify-center items-center 
-	      border border-[#ced4da] dark:border-[#000000] hover:border-0 hover:bg-[#f77f00] cursor-pointer 
+	      border border-[#ced4da] dark:border-[#515052] hover:border-[#f77f00] hover:bg-[#f77f00] cursor-pointer 
 	      text-[#000000] dark:text-[#ffffff] hover:text-[#ffffff] px-4 py-1 gap-2 rounded-[20px]">
               <SquarePen className="w-[20px] h-[20px]"/>
 	      <p className="font-medium tracking-wider">Edit</p>
 	    </Link>
 	    <button className="flex flex-row justify-center items-center
-	      border border-[#ced4da] dark:border-[#000000] hover:border-0 hover:bg-[#d62828] cursor-pointer
+	      border border-[#ced4da] dark:border-[#515052] hover:border-[#d62828] hover:bg-[#d62828] cursor-pointer
 	      text-[#000000] dark:text-[#ffffff] hover:text-[#ffffff] px-4 py-1 gap-2 rounded-[20px]"
 	      onClick={(e) => {setDeleteModal(true)}}>
 	      <Trash2 className="w-[20px] h-[20px]"/>
@@ -51,7 +51,7 @@ const View = () => {
 	    </button>
 	  </div>
 	</div>
-	<div className="border border-[#ced4da] dark:border-[#000000] text-[#000000] dark:text-[#ffffff] 
+	<div className="border border-[#ced4da] dark:border-[#515052] text-[#000000] dark:text-[#ffffff] 
 	  p-8 rounded-[10px]">
 	  <p className="tracking-wider text-md leading-7">{note.content}</p>
 	</div>

@@ -42,7 +42,7 @@ const Edit = () => {
 	<p className="text-2xl font-medium mb-[20px] dark:text-[#ffffff]">Editing a note</p>
 	<div key={note._id}>
 	  <textarea value={note.content} onChange={(e) => setNote({...note, content: e.target.value})}
-	    className="border border-[#ced4da] dark:border-[#212529] focus-within:border-[#08CB00] 
+	    className="border border-[#ced4da] dark:border-[#515052] focus-within:border-[#08CB00] 
 	      text-[#000000] dark:text-[#ffffff] w-[100%] h-[400px] outline-none
 	      py-6 px-8 rounded-[20px] tracking-wider text-medium leading-7"
 	  ></textarea>
